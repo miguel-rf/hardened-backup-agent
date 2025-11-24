@@ -1,0 +1,7 @@
+.env
+venv/
+__pycache__/
+*.enc
+*.key
+*.tar.gz
+data_to_backup/
