@@ -34,13 +34,13 @@ def upload_to_aws():
     print(f"Uploading to {BUCKET_NAME}...")
     s3 = boto3.client('s3')
     s3.upload_file(ENCRYPTED_FILENAME, BUCKET_NAME, ENCRYPTED_FILENAME)
-    print("Upload Complete!")
+    print("Upload Complete")
 
 if __name__ == "__main__":
     if not os.path.exists(SOURCE_FOLDER):
         os.makedirs(SOURCE_FOLDER)
         with open(f"{SOURCE_FOLDER}/secret.txt", "w") as f:
-            f.write("Confidential data for CV project.")
+            f.write("Confidential data.")
 
     try:
         create_archive()
